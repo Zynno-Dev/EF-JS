@@ -1,0 +1,38 @@
+{
+    "cordoba": {
+        "precio": "3000",
+        "tiempo": "1Hs"
+    },
+    "santa_fe": {
+        "precio": "3000",
+        "tiempo": "1Hs"
+    },
+    "neuquen": {
+        "precio": "4000",
+        "tiempo": "1.5Hs"
+    },
+    "salta": {
+        "precio": "6000",
+        "tiempo": "2Hs"
+    },
+    "formosa": {
+        "precio": "6000",
+        "tiempo": "2Hs"
+    },
+    "rio_negro": {
+        "precio": "5000",
+        "tiempo": "1.5Hs"
+    },
+    "tierra_del_fuego": {
+        "precio": "8000",
+        "tiempo": "3Hs"
+    },
+    "misiones": {
+        "precio": "4000",
+        "tiempo": "1Hs"
+    },
+    "la_pampa": {
+        "precio": "3000",
+        "tiempo": "1Hs"
+    }
+}

@@ -1,0 +1,169 @@
+html {
+  background-image: url(./recursos/rback.jpg);
+  background-repeat: repeat;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+header {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#264653+1,7db9e8+100&1+0,0+100 */
+  background: -moz-linear-gradient(
+    top,
+    rgba(38, 70, 83, 1) 0%,
+    rgba(38, 70, 83, 0.99) 1%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(38, 70, 83, 1) 0%,
+    rgba(38, 70, 83, 0.99) 1%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(38, 70, 83, 1) 0%,
+    rgba(38, 70, 83, 0.99) 1%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#264653', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+.fila1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.fila2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.fila3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+h1 {
+  text-align: center;
+  font-family: "Train One", cursive;
+  font-size: 300%;
+  color: #e9c46a;
+}
+h2 {
+  text-align: center;
+  font-family: "Train One", cursive;
+  font-size: 300%;
+  color: #e9c46a;
+}
+img {
+  border: solid 5px #e9c46a;
+}
+h3 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 35px;
+}
+.semititulo {
+  font-family: "Roboto", sans-serif;
+  color: #e9c46a;
+  text-align: center;
+  font-size: 500%;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 15px;
+  border-radius: 25px;
+  background: #e76f51af;
+  width: 500px;
+  margin: 50px auto 15px auto;
+  height: 100px;
+}
+img:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 6px #888888;
+  cursor: pointer;
+}
+#destino {
+  text-align: center;
+  margin: auto;
+  display: block;
+  width: 60vw;
+  height: auto;
+  font-size: 350%;
+  background-color: #264653;
+  color: #e9c46a;
+  text-align-last: center;
+}
+form {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px;
+  font-size: 250%;
+  grid-gap: 50px;
+}
+#ticket {
+  text-align: center;
+}
+input {
+  height: auto;
+  width: auto;
+  color: #264653;
+  font-size: 50%;
+  width: 175px;
+  position: absolute;
+  margin-top: 10px;
+}
+#boton {
+  width: 50vw;
+  height: 8vh;
+  margin-bottom: 35px;
+  font-size: 200%;
+  color: #264653;
+}
+label {
+  color: #264653;
+  background: #e76f51af;
+  border-radius: 15px;
+  text-align: right;
+}
+#boton {
+  margin: auto auto 25px auto;
+  padding: auto;
+  display: block;
+  position: static;
+}
+#vuelotxt {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  color: #e9c46a;
+  background: #e76f51af;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  display: block;
+  margin: auto;
+  padding: 0px;
+}
+em {
+    color: gold;
+}
+#vtxt {
+    font-family: "Roboto", sans-serif;
+    font-size: 200%;
+    color: #e9c46a;;
+    background: rgba(54, 50, 50, 0.63);
+    width: 250px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
