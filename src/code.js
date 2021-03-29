@@ -1,23 +1,23 @@
 $("#ticket").hide();
 $("#resultados").hide();
 
-let pjnum = ""
+let pjnum = "1"
 $("#pasajeros").change(function () {
   pjnum = $("#pasajeros").val();
   $("#pjlabel").text(pjnum + " Pasajeros: ");
 });
 
-let nombre = "";
+let nombre = "No Ingresado";
 $("#nombre").change(function () {
   nombre = $("#nombre").val();
 });
 
-let apellido = "";
+let apellido = "No Ingresado";
 $("#apellido").change(function () {
   apellido = $("#apellido").val();
 });
 
-let fechav = "";
+let fechav = "No Ingresado";
 $("#fecha").change(function () {
   fechav = $("#fecha").val();
 });
@@ -177,6 +177,7 @@ $("#boton").click(function() {
         $("#costototal").text("Precio total: $" + (costo*pjnum));
         $("#destinodviaje").text("Destino: " + destino2);
         $("#tiempoestimado").text("Horas de vuelo: " + tiempoaprox);
+        $("#fechadesalida").text("Fecha de salida: " + fechav);
     })
     .fail(function(xhr, status, error){
         console.log(xhr)
