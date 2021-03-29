@@ -187,9 +187,24 @@ $("#boton").click(function() {
 })
 $("#boton2").click(function () { 
     $("#boton2").hide();
+    $("#themeLabel").hide();
     window.print()  
     $("#boton2").show();  
+    $("#themeLabel").show();
 });
+
+let temaActual = "light"
+$("#theme").click(function () {
+    if (temaActual == "light") {
+        $("#body").addClass("dark");
+        $("#body").removeClass("light")
+        temaActual = "dark"
+    } else {
+        $("#body").addClass("light");
+        $("#body").removeClass("dark")
+        temaActual = "light"
+    }
+})
 
 
 
