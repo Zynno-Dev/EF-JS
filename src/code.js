@@ -1,4 +1,5 @@
 $("#ticket").hide();
+$("#resultados").hide();
 
 let pjnum = ""
 $("#pasajeros").change(function () {
@@ -36,11 +37,13 @@ hoy = yyyy + "-" + mm + "-" + dd;
 $("#fecha").attr("min", hoy);
 
 let destinodelviaje = ""
+let destino2 = ""
 $("#cordoba").click(function (e) {
   $("#main").hide("slow");
   $("#ticket").show("slow");
   $("#vuelotxt").text("Córdoba");
   destinodelviaje = "cordoba"
+  destino2 = "Córdoba"
 });
 
 $("#santa_fe").click(function (e) {
@@ -48,6 +51,7 @@ $("#santa_fe").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Santa Fe");
   destinodelviaje = "santa_fe"
+  destino2 = "Santa Fe"
 });
 
 $("#neuquen").click(function (e) {
@@ -55,6 +59,7 @@ $("#neuquen").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Neuquén");
   destinodelviaje = "neuquen"
+  destino2 = "Neuquén"
 });
 
 $("#salta").click(function (e) {
@@ -62,6 +67,7 @@ $("#salta").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Salta");
   destinodelviaje = "salta"
+  destino2 = "Salta"
 });
 
 $("#formosa").click(function (e) {
@@ -69,6 +75,7 @@ $("#formosa").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Formosa");
   destinodelviaje = "formosa"
+  destino2 = "Formosa"
 });
 
 $("#rio_negro").click(function (e) {
@@ -76,6 +83,7 @@ $("#rio_negro").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Rio Negro");
   destinodelviaje ="rio_negro"
+  destino2 = "Rio Negro"
 });
 
 $("#tierra_del_fuego").click(function (e) {
@@ -83,6 +91,7 @@ $("#tierra_del_fuego").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Tierra Del Fuego");
   destinodelviaje ="tierra_del_fuego"
+  destino2 = "Tierra Del Fuego"
 });
 
 $("#misiones").click(function (e) {
@@ -90,6 +99,7 @@ $("#misiones").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("Misiones");
   destinodelviaje = "misiones"
+  destino2 = "Misiones"
 });
 
 $("#la_pampa").click(function (e) {
@@ -97,6 +107,7 @@ $("#la_pampa").click(function (e) {
   $("#ticket").show("slow");
   $("#vuelotxt").text("La Pampa");
   destinodelviaje = "la_pampa"
+  destino2 = "La Pampa"
 });
 
 class pasajes {
@@ -112,6 +123,7 @@ class pasajes {
 
 let pasajero1 = ""
 let costo = ""
+let tiempoaprox = ""
 $("#boton").click(function() {
     $.ajax({
         url:"https://zynno-dev.github.io/EF-JS/src/destinos.json",
@@ -122,32 +134,49 @@ $("#boton").click(function() {
         let answer = resultado
         if (destinodelviaje = cordoba){
             costo = answer.cordoba.precio
+            tiempoaprox = answer.cordoba.tiempo
         }
         if (destinodelviaje = santa_fe){
             costo = answer.santa_fe.precio
+            tiempoaprox = answer.santa_fe.tiempo
         }
         if (destinodelviaje = neuquen){
             costo = answer.neuquen.precio
+            tiempoaprox = answer.neuquen.tiempo
         }
         if (destinodelviaje = salta){
             costo = answer.salta.precio
+            tiempoaprox = answer.salta.tiempo
         }
         if (destinodelviaje = formosa){
             costo = answer.formosa.precio
+            tiempoaprox = answer.formosa.tiempo
         }
         if (destinodelviaje = rio_negro){
             costo = answer.rio_negro.precio
+            tiempoaprox = answer.rio_negro.tiempo
         }
         if (destinodelviaje = tierra_del_fuego){
             costo = answer.tierra_del_fuego.precio
+            tiempoaprox = answer.tierra_del_fuego.tiempo
         }
         if (destinodelviaje = misiones){
             costo = answer.misiones.precio
+            tiempoaprox = answer.misiones.tiempo
         }
         if (destinodelviaje = la_pampa){
             costo = answer.la_pampa.precio
+            tiempoaprox = answer.la_pampa.tiempo
         }
         pasajero1 = new pasajes(nombre, apellido, pjnum, destinodelviaje, fechav, (costo * pjnum));
+        $("#ticket").hide("slow");
+        $("#resultados").show("slow");
+        $("#nombreyapellido").text("Titular: " + nombre + " " + apellido);
+        $("#cantdpasajeros").text("N° de pasajeros: " + pjnum);
+        $("#costoxpasaje").text("Precio por pasaje: $" + costo);
+        $("#costototal").text("Precio total: $" + (costo*pjnum));
+        $("#destinodviaje").text("Destino: " + destino2);
+        $("#tiempoestimado").text("Horas de vuelo: " + tiempoaprox);
     })
     .fail(function(xhr, status, error){
         console.log(xhr)

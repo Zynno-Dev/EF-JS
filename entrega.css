@@ -160,10 +160,22 @@ em {
 #vtxt {
     font-family: "Roboto", sans-serif;
     font-size: 200%;
-    color: #e9c46a;;
+    color: #e9c46a;
     background: rgba(54, 50, 50, 0.63);
     width: 250px;
     display: block;
     margin: auto;
     border-radius: 15px;
+}
+.textoresultado {
+    text-align: center;
+    font-size: 200%;
+    font-family: "Roboto", sans-serif;
+    color: #e9c46a;
+    background: rgba(54, 50, 50, 0.63);
+    width: 500px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
