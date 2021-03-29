@@ -184,7 +184,11 @@ $("#boton").click(function() {
         console.log(error)
     })
 })
-
+$("#boton2").click(function () { 
+    $("#boton2").hide();
+    window.print()  
+    $("#boton2").show();  
+});
 
 
 

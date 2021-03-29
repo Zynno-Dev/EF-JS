@@ -179,3 +179,12 @@ em {
     border-radius: 15px;
     margin-bottom: 20px;
 }
+#boton2 {
+    margin: auto auto 25px auto;
+    padding: auto;
+    display: block;
+    position: static;
+    width: 450px;
+    height: 50px;
+    font-size: 170%;
+  }
