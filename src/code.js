@@ -1,7 +1,7 @@
 $("#ticket").hide();
 $("#resultados").hide();
 
-let pjnum = "1"
+let pjnum = 1
 $("#pasajeros").change(function () {
   pjnum = $("#pasajeros").val();
   $("#pjlabel").text(pjnum + " Pasajeros: ");
